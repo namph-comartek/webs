@@ -8,7 +8,7 @@ export default class LoginRegister extends Component {
       <div className="page-section mb-60">
         <div className="container">
           <div className="row">
-            <Login> </Login> <Register> </Register>{" "}
+            <Login> </Login>{" "}
           </div>{" "}
         </div>{" "}
       </div>
