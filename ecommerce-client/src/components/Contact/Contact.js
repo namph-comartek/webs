@@ -8,39 +8,42 @@ export default class Contact extends Component {
       name: "",
       email: "",
       subject: "",
-      message: ""
+      message: "",
     };
   }
-  handleChange = event => {
+  handleChange = (event) => {
     const target = event.target;
     const value = target.type === "checkbox" ? target.checked : target.value;
     const name = target.name;
     this.setState({
-      [name]: value
+      [name]: value,
     });
   };
-  handleSubmit = async event => {
+  handleSubmit = async (event) => {
     event.preventDefault();
     const { name, email, subject, message } = this.state;
     const newSubject = subject ? subject : null;
     const newMessage = message ? message : null;
-    if(!name || !email) {
-      return toast.error('Error! name and email is required')
+    if (!name || !email) {
+      return toast.error("Error! name and email is required");
     }
     const newContact = {
+      phone,
       name,
       email,
       subject: newSubject,
-      message: newMessage
+      message: newMessage,
     };
     const res = await callApi("contacts", "POST", newContact, null);
     if (res && res.status === 200) {
       toast.success("Sending contact is successfully");
       this.setState({
+        phone: "",
+
         name: "",
         email: "",
         subject: "",
-        message: ""
+        message: "",
       });
     }
   };
@@ -69,15 +72,15 @@ export default class Contact extends Component {
                   <h4>
                     <i className="fa fa-phone" /> Phone
                   </h4>
-                  <p>Mobile: (+84) 123 456 789</p>
-                  <p>Hotline: 1009 678 456</p>
+                  <p>Mobile: (+84) 964-205-406</p>
+                  <p>Hotline: 19001596</p>
                 </div>
                 <div className="single-contact-block last-child">
                   <h4>
                     <i className="fa fa-envelope-o" /> Email
                   </h4>
-                  <p>admin@limupa.com</p>
-                  <p>support@limupa.com</p>
+                  <p>admin@gmail.com</p>
+                  <p>support@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -85,7 +88,7 @@ export default class Contact extends Component {
               <div className="contact-form-content pt-sm-55 pt-xs-55">
                 <h3 className="contact-page-title">Tell Us Your Message</h3>
                 <div className="contact-form">
-                  <form onSubmit={event => this.handleSubmit(event)}>
+                  <form onSubmit={(event) => this.handleSubmit(event)}>
                     <div className="form-group">
                       <label>
                         Your Name <span className="required">*</span>
@@ -108,6 +111,18 @@ export default class Contact extends Component {
                         value={email}
                       />
                     </div>
+                    <div className="form-group">
+                      <label>
+                        Your Phone <span className="required">*</span>
+                      </label>
+                      <input
+                        onChange={this.handleChange}
+                        type="phone"
+                        name="phone"
+                        value={phone}
+                      />
+                    </div>
+
                     <div className="form-group">
                       <label>Subject</label>
                       <input

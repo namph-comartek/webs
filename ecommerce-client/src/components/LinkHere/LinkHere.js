@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class LinkHere extends Component {
   render() {
@@ -9,12 +9,14 @@ export default class LinkHere extends Component {
         <div className="container">
           <div className="breadcrumb-content">
             <ul>
-              <li><Link to="/">Home</Link></li>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
               <li className="active">{url}</li>
             </ul>
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
