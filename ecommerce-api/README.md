@@ -1,10 +1,4 @@
-*** ===> Thông tin cá nhân <=== ***
-  + Liên hệ: 0353.853.171
-  + FB: https://www.facebook.com/hoangtran.dev
-  + My chanel: https://www.youtube.com/channel/UC7jAJMVtvAg8W9mmPXJ-Zgw
-  + Skye: tranminhhoangnct@gmail.com
-  + Thời gian hỗ trợ: 18-24h
-  + Freelancer: Nhận thiết kế hệ thống API, Website, Mobile app theo yêu cầu, 15$/hour
+
 
 *** Hướng dẫn cài đặt ***
 Step-1. Visual Studio Code (IDE Coding)
@@ -41,6 +35,4 @@ Step-6: Khởi chạy source code (ecommerce-admin, ecommerce-api, ecommerce-cli
   - Admin
      + Email: admin@gmail.com || Mật khẩu: 123456
 
-*** DỊCH VỤ THÊM ***
-  + Đưa sản phẩm lên môi trường thực tế: 500k (Chưa bao gồm chi phí mua tên miền)
-  + File word cho các bạn sinh viên nộp báo cáo: 100k
+
