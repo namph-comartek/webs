@@ -56,12 +56,7 @@ const routes = [{
         main: (match) => < ForgotPassword match = { match }
         />,
     },
-    {
-        path: "/sign-in",
-        exact: false,
-        main: (match) => < Login match = { match }
-        />,
-    },
+
     {
         path: "/sign-up",
         exact: false,

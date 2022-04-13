@@ -66,17 +66,18 @@ class Login extends Component {
     const { email, password } = this.state;
     const { user } = this.props;
     if (user !== null) {
-      return <Redirect to="/"></Redirect>;
+      return <Redirect to="/"> </Redirect>;
     }
     return (
       <div className="col-sm-12 col-md-12 col-xs-12 col-lg-6 mb-30">
-        {/* Login Form s*/}
+        {" "}
+        {/* Login Form s*/}{" "}
         <form onSubmit={(event) => this.handleSubmit(event)}>
           <div className="login-form">
-            <h4 className="login-title">Login</h4>
+            <h4 className="login-title"> Login </h4>{" "}
             <div className="row">
               <div className="col-md-12 col-12 mb-20">
-                <label>Email Address*</label>
+                <label> Email Address * </label>{" "}
                 <input
                   onChange={this.handleChange}
                   value={email}
@@ -85,9 +86,9 @@ class Login extends Component {
                   placeholder="Email Address"
                   name="email"
                 />
-              </div>
+              </div>{" "}
               <div className="col-12 mb-20">
-                <label>Password</label>
+                <label> Password </label>{" "}
                 <input
                   onChange={this.handleChange}
                   value={password}
@@ -96,33 +97,33 @@ class Login extends Component {
                   placeholder="Password"
                   name="password"
                 />
-              </div>
+              </div>{" "}
               <div className="col-md-8">
                 <div className="check-box d-inline-block ml-0 ml-md-2 mt-10">
                   <input type="checkbox" id="remember_me" />
-                  <label htmlFor="remember_me">Remember me</label>
-                </div>
-              </div>
+                  <label htmlFor="remember_me"> Remember me </label>{" "}
+                </div>{" "}
+              </div>{" "}
               <div className="col-md-4 mt-10 mb-20 text-left text-md-right">
-                <Link to="/forgot-password"> Forgotten pasward?</Link>
-              </div>
+                <Link to="/forgot-password"> Forgotten pasward ? </Link>{" "}
+              </div>{" "}
               <div className="col-md-4">
-                <button className="register-button mt-0 mb-3">Login</button>
-              </div>
+                <button className="register-button mt-0 mb-3"> Login </button>{" "}
+              </div>{" "}
               <div>
-                <Link to="/sign-up">Create Your Account</Link>
-              </div>
+                <Link to="/sign-up"> Create Your Account </Link>{" "}
+              </div>{" "}
               <div className="col-md-8">
                 <Recaptcha
                   sitekey="6Lcd9sEUAAAAAAEj4w9sjBETFKCPXVmcPelQzGjK"
                   render="explicit"
                   verifyCallback={(res) => this.verifyCallback(res)}
                   onloadCallback={this.recaptchaLoaded}
-                />
-              </div>
-            </div>
-          </div>
-        </form>
+                />{" "}
+              </div>{" "}
+            </div>{" "}
+          </div>{" "}
+        </form>{" "}
       </div>
     );
   }

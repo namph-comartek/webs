@@ -31,7 +31,7 @@ class Register extends Component {
 
   handleSubmit = async (event) => {
     event.preventDefault();
-    const history = useHistory();
+    // const history = useHistory();
     const { name, email, password, repassword } = this.state;
     if (password !== repassword) {
       toast.error("The password is not the same");
@@ -55,8 +55,7 @@ class Register extends Component {
       password: "",
       repassword: "",
     });
-    this.props.history.push("/sign-in");
-
+    window.location.replace("/sign-in");
     doneLoading();
   };
 

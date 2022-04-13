@@ -28,7 +28,7 @@ export default class Contact extends Component {
       return toast.error("Error! name and email is required");
     }
     const newContact = {
-      phone,
+      // phone,
       name,
       email,
       subject: newSubject,
@@ -38,7 +38,7 @@ export default class Contact extends Component {
     if (res && res.status === 200) {
       toast.success("Sending contact is successfully");
       this.setState({
-        phone: "",
+        // phone: "",
 
         name: "",
         email: "",
@@ -55,91 +55,89 @@ export default class Contact extends Component {
           <div className="row">
             <div className="col-lg-5 offset-lg-1 col-md-12 order-1 order-lg-2">
               <div className="contact-page-side-content">
-                <h3 className="contact-page-title">Contact Us</h3>
+                <h3 className="contact-page-title"> Contact Us </h3>{" "}
                 <p className="contact-page-message mb-25">
                   Claritas est etiam processus dynamicus, qui sequitur
-                  mutationem consuetudium lectorum. Mirum est notare quam
-                  littera gothica, quam nunc putamus parum claram anteposuerit
-                  litterarum formas human.
-                </p>
+                  mutationem consuetudium lectorum.Mirum est notare quam littera
+                  gothica, quam nunc putamus parum claram anteposuerit
+                  litterarum formas human.{" "}
+                </p>{" "}
                 <div className="single-contact-block">
                   <h4>
-                    <i className="fa fa-fax" /> Address
-                  </h4>
-                  <p>03 Quang Trung – Da Nang - VN</p>
-                </div>
+                    <i className="fa fa-fax" /> Address{" "}
+                  </h4>{" "}
+                  <p> 03 Quang Trung– Da Nang - VN </p>{" "}
+                </div>{" "}
                 <div className="single-contact-block">
                   <h4>
-                    <i className="fa fa-phone" /> Phone
-                  </h4>
-                  <p>Mobile: (+84) 964-205-406</p>
-                  <p>Hotline: 19001596</p>
-                </div>
+                    <i className="fa fa-phone" /> Phone{" "}
+                  </h4>{" "}
+                  <p> Mobile: (+84) 964 - 205 - 406 </p>{" "}
+                  <p> Hotline: 19001596 </p>{" "}
+                </div>{" "}
                 <div className="single-contact-block last-child">
                   <h4>
-                    <i className="fa fa-envelope-o" /> Email
-                  </h4>
-                  <p>admin@gmail.com</p>
-                  <p>support@gmail.com</p>
-                </div>
-              </div>
-            </div>
+                    <i className="fa fa-envelope-o" /> Email{" "}
+                  </h4>{" "}
+                  <p> admin @gmail.com </p> <p> support @gmail.com </p>{" "}
+                </div>{" "}
+              </div>{" "}
+            </div>{" "}
             <div className="col-lg-6 col-md-12 order-2 order-lg-1">
               <div className="contact-form-content pt-sm-55 pt-xs-55">
-                <h3 className="contact-page-title">Tell Us Your Message</h3>
+                <h3 className="contact-page-title"> Tell Us Your Message </h3>{" "}
                 <div className="contact-form">
                   <form onSubmit={(event) => this.handleSubmit(event)}>
                     <div className="form-group">
                       <label>
-                        Your Name <span className="required">*</span>
-                      </label>
+                        Your Name <span className="required"> * </span>{" "}
+                      </label>{" "}
                       <input
                         onChange={this.handleChange}
                         type="text"
                         name="name"
                         value={name}
-                      />
-                    </div>
+                      />{" "}
+                    </div>{" "}
                     <div className="form-group">
                       <label>
-                        Your Email <span className="required">*</span>
-                      </label>
+                        Your Email <span className="required"> * </span>{" "}
+                      </label>{" "}
                       <input
                         onChange={this.handleChange}
                         type="email"
                         name="email"
                         value={email}
-                      />
-                    </div>
+                      />{" "}
+                    </div>{" "}
                     <div className="form-group">
                       <label>
-                        Your Phone <span className="required">*</span>
-                      </label>
+                        Your Phone <span className="required"> * </span>{" "}
+                      </label>{" "}
                       <input
                         onChange={this.handleChange}
                         type="phone"
                         name="phone"
-                        value={phone}
-                      />
+                        // value={phone}
+                      />{" "}
                     </div>
-
                     <div className="form-group">
-                      <label>Subject</label>
+                      <label> Subject </label>{" "}
                       <input
                         onChange={this.handleChange}
                         type="text"
                         name="subject"
                         value={subject}
-                      />
-                    </div>
+                      />{" "}
+                    </div>{" "}
                     <div className="form-group mb-30">
-                      <label>Your Message</label>
+                      <label> Your Message </label>{" "}
                       <textarea
                         onChange={this.handleChange}
                         name="message"
                         value={message}
-                      />
-                    </div>
+                      />{" "}
+                    </div>{" "}
                     <div className="form-group">
                       <button
                         type="submit"
@@ -147,16 +145,16 @@ export default class Contact extends Component {
                         className="li-btn-3"
                         name="submit"
                       >
-                        send
-                      </button>
-                    </div>
-                  </form>
-                </div>
+                        send{" "}
+                      </button>{" "}
+                    </div>{" "}
+                  </form>{" "}
+                </div>{" "}
                 <p className="form-messege" />
-              </div>
-            </div>
-          </div>
-        </div>
+              </div>{" "}
+            </div>{" "}
+          </div>{" "}
+        </div>{" "}
       </div>
     );
   }
